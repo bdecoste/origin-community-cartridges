@@ -7,9 +7,8 @@ Release:       1%{?dist}
 Group:         Development/Languages
 License:       ASL 2.0
 URL:           http://openshift.redhat.com
-Source0:       http://mirror.openshift.com/pub/openshift-origin/source/%{name}/%{name}-%{version}.tar.gz
+Source0:       %{name}/%{name}-%{version}.tar.gz
 Requires:      rubygem(openshift-origin-node)
-Requires:      tomcat8
 Requires:      lsof
 Requires:      java-1.7.0-openjdk
 Requires:      java-1.7.0-openjdk-devel
@@ -75,6 +74,7 @@ alternatives --set jtomcat8 /usr/share/tomcat8
 %dir %{cartridgedir}/env
 %dir %{cartridgedir}/metadata
 %dir %{cartridgedir}/template
+%dir %{cartridgedir}/versions
 %attr(0755,-,-) %{cartridgedir}/bin/
 %attr(0755,-,-) %{cartridgedir}/hooks/
 %attr(0755,-,-) %{cartridgedir}
